@@ -1,0 +1,34 @@
+<html>
+<body>
+
+<form method="post" action="/registration/show">
+{% csrf_token %}
+<br>
+
+{{form.Username.errors}}
+<label for="{{form.Username.id_for_label}}">Username :</label>
+{{form.Username}}
+<br>
+{{form.Password.errors}}
+<label for="{{form.Password.id_for_label}}">Password :</label>
+{{form.Password}}
+<br>
+{{form.Email.errors}}
+<label for="{{form.Email.id_for_label}}">Email :</label>
+{{form.Email}}
+<br>
+{{form.PhoneNo.errors}}
+<label for="{{form.PhoneNo.id_for_label}}">PhoneNo :</label>
+{{form.PhoneNo}}
+<br>
+{% comment %} <input type="text" name="uname">
+<br>
+<input type="password" name="password">
+<br>
+{% endcomment %}
+<input type="submit" value="Register"> 
+<br>
+<br>
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<html>
+<body>
+
+<form method="post" action="/login/check">
+{% csrf_token %}
+<br>
+
+{{form.Username.errors}}
+<label for="{{form.Username.id_for_label}}">Username :</label>
+{{form.Username}}
+<br>
+{{form.Uassword.errors}}
+<label for="{{form.Password.id_for_label}}">Password :</label>
+{{form.Password}}
+<br>
+{% comment %} <input type="text" name="uname">
+<br>
+<input type="password" name="password">
+<br>
+{% endcomment %}
+<input type="submit" value="LOGIN"> 
+<br>
+<a href="/registration/registrationpage">Register</a>
+<br>
+</form>
+</body>
+</html>
+
